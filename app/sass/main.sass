@@ -1,0 +1,52 @@
+@import 'utils/vars'
+@import 'utils/mixins'
+
+*
+  box-sizing: border-box
+
+html, body
+  width: 100%
+  height: 100%
+  margin: 0
+  padding: 0
+  font-family: $mainFont !important
+  font-size: $mainFontSize
+  font-weight: $mainFontWeight
+  color: $mainFontColor
+  line-height: $mainLineHeight
+
+html
+  @media screen and (max-width: $mdWidth)
+    font-size: 15px
+  @media screen and (max-width: $smWidth)
+    font-size: 14px
+
+h1, h2, h3, h4, h5, h6, p, span, figure, select, input
+  margin: 0
+  padding: 0
+  border: 0
+  outline: 0
+
+ul, ol
+  padding: 0
+  margin: 0
+  list-style: none
+
+input
+  &:invalid
+    box-shadow: none
+
+a
+  color: $defaultColor
+  text-decoration: none
+  transition: all .3s ease
+
+  &:hover, &:focus, &:active
+    text-decoration: none
+    color: $primaryColor
+//&:visited
+  color: $defaultColor
+
+
+@import 'modules/test'
+@import 'utils/media'
